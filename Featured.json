@@ -1,0 +1,26 @@
+{
+  "featured_entries":
+  [
+    {
+      "title": "The Origin of Lake Toba",
+      "type": "Transcript",
+      "subtype": "Adaptation",
+      "description": "Once upon a time there was a young farmer named Toba. He lived in a fertile valley, therefore he was able to support his lonely, humble life with the crops he grew.",
+      "thumbnail_src": "https://www.earthstoriez.com/wp-content/uploads/2017/11/lake-tobaThe-earth-and-its-inhabitants-292x300.jpg"
+    },
+    {
+      "title": "Begu Ganjang",
+      "type": "Article",
+      "subtype": "Folk Legend",
+      "description": "Begu Ganjang described as a supernatural figure who has a very terrible form. That said, he has a tall and large body. Long hair with a scary face. In fact, according to the legend that is told, begu ganjang can change itself bigger and higher.",
+      "thumbnail_src": "https://www.indoindians.com/wp-content/uploads/2018/07/hantu-begu-ganjang.jpg"
+    },
+    {
+      "title": "An Unpublished Batak Creation Legend",
+      "type": "Transcript",
+      "subtype": "Obscure Text",
+      "description": " \"I fold my hands respectfully above my head, O gods on high!\" \"Seven times pardon, lord, for naming thy name,\" ",
+      "thumbnail_src": "https://www.earthstoriez.com/wp-content/uploads/2017/11/lake-tobaThe-earth-and-its-inhabitants-292x300.jpg"
+    }
+  ]
+}

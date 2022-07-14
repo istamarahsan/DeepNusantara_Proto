@@ -1,0 +1,42 @@
+{
+  "catalogue": [
+    {
+      "title": "Cultures",
+      "submenus": [
+        {
+          "title": "Javan",
+          "selections": [
+            "Sundanese",
+            "East Javan"
+          ]
+        },
+        {
+          "title": "Sumatran",
+          "selections": [
+            "Sundanese",
+            "East Javan"
+          ]
+        },
+        {
+          "title": "Bornean",
+          "selections": [
+            "Sundanese",
+            "East Javan"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Locations",
+      "submenus": [
+        {
+          "title": "Javan",
+          "selections": [
+            "Sundanese",
+            "East Javan"
+          ]
+        }
+      ]
+    }
+  ]
+}

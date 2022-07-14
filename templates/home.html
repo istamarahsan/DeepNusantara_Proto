@@ -1,0 +1,113 @@
+{% extends "layout.html" %}
+{% block content %}
+
+    <div class="row">
+        <h1 class="col text-start">DeepNusantara</h1>
+        <div class="col-md-4 form-group">
+            <form class="form-inline my-2 my-lg-0 d-flex flex-row flex-nowrap">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="row justify-content-center mx-5 p-5">
+        <h3 class="text-center">
+            A collaborative resource on the hidden worlds of the archipelago.
+        </h3>
+    </div>
+
+    <div class="row justify-content-center bg-light mx-0 py-4">
+        <div class="col-md-5 col-xs-12">
+            <h4 class="text-center">Dive right in with a random entry.</h4>
+            <ul class="nav nav-fill hstack justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Article</a>
+                </li>
+                <div class="vr"></div>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Transcript</a>
+                </li>
+                <div class="vr"></div>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Journey</a>
+                </li>
+                <div class="vr"></div>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Any</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row g-0 justify-content-center flex-nowrap">
+        <div class="col-sm-2 justify-content-center bg-light">
+            <h4 class="text-left px-3">
+                Catalogue
+            </h4>
+            {% for menu in catalogue %}
+                <nav class="navbar">
+                    {% set id = menu.title %}
+                    {% set data_target = "#" + id %}
+                    <button class="navbar-toggler text-left" type="button"
+                            data-bs-toggle="collapse" data-bs-target="{{ data_target }}">
+                        {{ menu.title }}
+                    </button>
+                </nav>
+
+                <div class="collapse navbar-collapse" id="{{ id }}">
+                    {% for submenu in menu.submenus %}
+                        <nav class="navbar">
+                            {% set id = submenu.title %}
+                            {% set data_target = "#" + id %}
+                            <button class="navbar-toggler text-start" type="button"
+                                    data-bs-toggle="collapse" data-bs-target={{ data_target }}>
+                                {{ submenu.title }}
+                            </button>
+                            <div class="collapse navbar-collapse" id={{ id }}>
+                                <ul class="navbar-nav mr-auto">
+                                    {% for selection in submenu.selections %}
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">
+                                                {{ selection }}
+                                            </a>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </nav>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+        </div>
+        <div class="vstack g-0 col justify-content-start">
+            <h2 class="card text-center py-3 my-0">Featured Entries</h2>
+            {% for post in featured %}
+                <div class="card flex-row justify-content-start">
+                    <div class="row g-0">
+                        <img class="card-img-left img-fluid col p-3"
+                             style="max-height:250px; object-fit: cover"
+                             src={{ post.thumbnail_src }}>
+                        <div class="card-body text-start col-md-6">
+                            <div class="d-flex flex-row align-items-baseline">
+                                <h3 class="mb-0">{{ post.type }} </h3>
+                                <div class="vr mx-2"></div>
+                                <h5 class="mb-0"> {{ post.subtype }}</h5>
+                            </div>
+                            <h2 class="card-title">{{ post.title }}</h2>
+                            <p>
+                                {{ post.description }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+
+        </div>
+    </div>
+
+{% endblock content %}
+
+
+
+
