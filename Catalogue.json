@@ -2,40 +2,26 @@
   "catalogue": [
     {
       "title": "Cultures",
-      "submenus": [
-        {
-          "title": "Javan",
-          "selections": [
-            "Sundanese",
-            "East Javan"
-          ]
-        },
-        {
-          "title": "Sumatran",
-          "selections": [
-            "Sundanese",
-            "East Javan"
-          ]
-        },
-        {
-          "title": "Bornean",
-          "selections": [
-            "Sundanese",
-            "East Javan"
-          ]
-        }
+      "selections": [
+        "Sumatran",
+        "Javan",
+        "Bornean",
+        "Papuan"
       ]
     },
     {
       "title": "Locations",
-      "submenus": [
-        {
-          "title": "Javan",
-          "selections": [
-            "Sundanese",
-            "East Javan"
-          ]
-        }
+      "selections": [
+        "Lakes",
+        "Structures"
+      ]
+    },
+    {
+      "title": "Mythology",
+      "selections": [
+        "Creation Myths",
+        "Folktales",
+        "Urban"
       ]
     }
   ]

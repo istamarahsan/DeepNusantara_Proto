@@ -1,0 +1,51 @@
+{% extends "base_page_layout.html" %}
+
+{% block header %}
+    <div class="container">
+        <div class="row">
+            <h1 class="text-center"><strong>{{ page_data.head.type }}</strong></h1>
+        </div>
+        <div class="row">
+            <h5 class="text-center">Tags:</h5>
+            <div class="EntryTags d-flex flex-wrap justify-content-center px-5" id="entryTags">
+                {% for tag in page_data.tags %}
+                    <h5><span class="badge rounded-pill mx-1">{{ tag }}</span></h5>
+                {% endfor %}
+            </div>
+        </div>
+        <hr class="my-1 mx-5">
+        <div class="row justify-content-center">
+            <ul class="LinkNavbar nav my-2 text-center col justify-content-center px-0" id="entryActions">
+                <li class="nav-item small">
+                    <a class="nav-link py-1" href="#">Edit this entry</a>
+                </li>
+                <div class="vr"></div>
+                <li class="nav-item small">
+                    <a class="nav-link py-1" href="#">View page history</a>
+                </li>
+                <div class="vr"></div>
+                <li class="nav-item small">
+                    <a class="nav-link py-1" href="#">Report an issue</a>
+                </li>
+                <div class="vr"></div>
+                <li class="nav-item small">
+                    <a class="nav-link py-1" href="#">Page discussion</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+{% endblock %}
+
+{% block innercontent %}
+    <div class="row text-center mt-3 py-1 px-5">
+        <h4>{{ page_data.head.subtype }}</h4>
+        <h1 class="display-2">{{ page_data.head.title }}</h1>
+        <div class="text-start mt-3">
+            {% block page_content %}
+                {% for para in page_data.content %}
+                    <p>{{ para }}</p>
+                {% endfor %}
+            {% endblock %}
+        </div>
+    </div>
+{% endblock %}

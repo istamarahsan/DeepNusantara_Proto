@@ -1,7 +1,7 @@
 {
-  "featured_entries":
-  [
+  "featured_entries": [
     {
+      "id": "the-origin-of-lake-toba",
       "title": "The Origin of Lake Toba",
       "type": "Transcript",
       "subtype": "Adaptation",
@@ -9,6 +9,7 @@
       "thumbnail_src": "https://www.earthstoriez.com/wp-content/uploads/2017/11/lake-tobaThe-earth-and-its-inhabitants-292x300.jpg"
     },
     {
+      "id": "",
       "title": "Begu Ganjang",
       "type": "Article",
       "subtype": "Folk Legend",
@@ -16,6 +17,7 @@
       "thumbnail_src": "https://www.indoindians.com/wp-content/uploads/2018/07/hantu-begu-ganjang.jpg"
     },
     {
+      "id": "",
       "title": "An Unpublished Batak Creation Legend",
       "type": "Transcript",
       "subtype": "Obscure Text",

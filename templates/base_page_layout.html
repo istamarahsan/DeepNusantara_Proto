@@ -1,0 +1,96 @@
+{% extends "layout.html" %}
+
+
+
+{% block content %}
+    <div class="row m-5">
+        <header class="row">
+            <div class="col">
+                <h1 class="display-2 text-start">DeepNusantara</h1>
+            </div>
+            <div class="form-group col-md-4 d-flex justify-content-end align-items-center">
+                <form class="form-inline my-2 my-lg-0 d-flex">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </header>
+
+        <div class="row justify-content-center mx-5 p-5">
+            <h3 class="display-6 text-center">
+                A collaborative resource on the hidden worlds of the archipelago.
+            </h3>
+        </div>
+
+        <nav class="bg-dark py-1">
+            <div class="container d-flex flex-wrap">
+                <ul class="LinkNavbar nav me-auto flex-wrap">
+                    <li class="nav-item">
+                        <a class="nav-link link-light px-2" href="../">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link link-light px-2" href="#">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link link-light px-2" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link link-light px-2" href="#">How to Contribute</a>
+                    </li>
+                </ul>
+                <ul class="LinkNavbar nav flex-wrap">
+                    <li class="nav-item">
+                        <button type="button" class="btn nav-link link-light px-2" data-bs-toggle="modal"
+                                data-bs-target="#modalLoginSignup" id="navLoginButton" onclick="on_login_click()">Login
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" class="btn nav-link link-light px-2" data-bs-toggle="modal"
+                                data-bs-target="#modalLoginSignup" id="navSignupButton" onclick="on_signup_click()">Sign Up
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="bg-light px-4 py-3">
+            {% block header %}
+
+            {% endblock %}
+        </div>
+
+        <div class="row g-0 justify-content-start flex-nowrap">
+            <div class="col col-sm-2 bg-light">
+                <div class="vstack">
+                    <h4 class="ps-2 pb-2">
+                        Catalogue
+                    </h4>
+                    <div class="vstack text-start align-items-start">
+                        {% for category in catalogue %}
+                            <nav class="navbar">
+                                {% set id = category.title %}
+                                {% set data_target = "#" + id %}
+                                <button class="navbar-toggler text-left mb-1" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="{{ data_target }}">
+                                    {{ category.title }}
+                                </button>
+                                <div class="collapse navbar-collapse" id="{{ id }}">
+                                    <ul class="navbar-nav">
+                                        {% for selection in category.selections %}
+                                            <li class="nav-item py-1">
+                                                <a class="ps-3 link-dark">{{ selection }}</a>
+                                            </li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </nav>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                {% block innercontent %}
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
